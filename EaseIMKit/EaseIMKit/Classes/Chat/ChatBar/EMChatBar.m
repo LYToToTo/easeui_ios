@@ -202,7 +202,7 @@
         [textBoard addSubview:self.textView];
         [self.textView Ease_remakeConstraints:^(EaseConstraintMaker *make) {
             make.left.equalTo(self).offset(0);
-            make.right.equalTo(self).offset(36);
+            make.right.equalTo(self).offset(-36);
             make.top.equalTo(_quoteView.ease_bottom).offset(0);
             make.height.Ease_equalTo(kTextViewMinHeight);
         }];
