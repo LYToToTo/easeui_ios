@@ -180,12 +180,15 @@
     }];
     
     if (_viewModel.inputBarStyle == EaseInputBarStyleTextVoiceAndVideo) {
-        [_audioButton Ease_remakeConstraints:^(EaseConstraintMaker *make) {
-            make.centerY.equalTo(self.textView);
-            make.right.equalTo(self).offset(16);
-            make.width.Ease_equalTo(@16);
-            make.height.Ease_equalTo(kIconwidth);
-        }];
+        // emoji 替换为语音， 更多替换为视频
+        [_emojiButton setBackgroundImage:[UIImage easeUIImageNamed:@"LT_Call"] forState:UIControlStateNormal];
+        [_emojiButton setBackgroundImage:[UIImage easeUIImageNamed:@"LT_Call"] forState:UIControlStateSelected];
+        
+        [_conversationToolBarBtn setBackgroundImage:[UIImage easeUIImageNamed:@"LT_Video"] forState:UIControlStateNormal];
+        [_conversationToolBarBtn setBackgroundImage:[UIImage easeUIImageNamed:@"LT_Video"] forState:UIControlStateSelected];
+        
+        [self bringSubviewToFront:_emojiButton];
+        [self bringSubviewToFront:_conversationToolBarBtn];
     }
     /*
     self.audioDescBtn = [[UIButton alloc]init];
