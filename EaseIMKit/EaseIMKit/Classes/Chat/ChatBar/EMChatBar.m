@@ -174,12 +174,13 @@
             make.right.equalTo(self).offset(-16);
         }
         if (_viewModel.inputBarStyle == EaseInputBarStyleTextVoiceAndVideo) {
-            make.left.equalTo(self).offset(16);
-            make.right.equalTo(self).offset(-16);
+            make.left.equalTo(self).offset(12);
+            make.right.equalTo(self).offset(-12);
         }
     }];
     
     if (_viewModel.inputBarStyle == EaseInputBarStyleTextVoiceAndVideo) {
+
         // emoji 替换为语音， 更多替换为视频
         [_emojiButton setBackgroundImage:[UIImage easeUIImageNamed:@"LT_Call"] forState:UIControlStateNormal];
         [_emojiButton setBackgroundImage:[UIImage easeUIImageNamed:@"LT_Call"] forState:UIControlStateSelected];
