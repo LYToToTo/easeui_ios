@@ -34,7 +34,7 @@
 #import "EaseDefines.h"
 #import "EMChatMessage+EaseUIExt.h"
 #import "UIImage+EaseUI.h"
-
+//LiuYU
 @interface EaseChatViewControllerSearchRowAction : NSObject
 @property (nonatomic, assign) BOOL isSearching;
 @property (nonatomic, assign) NSInteger maxSearchPageCount;
