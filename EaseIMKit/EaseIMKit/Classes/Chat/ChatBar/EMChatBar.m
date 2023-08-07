@@ -33,6 +33,7 @@
 @property (nonatomic, strong) UIView *quoteView;
 @property (nonatomic, strong) UILabel *quoteLabel;
 @property (nonatomic, strong) UIButton *quoteDeleteButton;
+@property (nonatomic, strong) UIView *textBoard;
 
 @end
 
@@ -198,8 +199,9 @@
             make.top.equalTo(_quoteView.ease_bottom).offset(5);
             make.height.Ease_equalTo(kTextViewMinHeight);
         }];
-        
+        self.textBoard = textBoard;
         [textBoard addSubview:self.textView];
+        self.textView.backgroundColor = [UIColor clearColor];
         [self.textView Ease_remakeConstraints:^(EaseConstraintMaker *make) {
             make.left.equalTo(textBoard).offset(0);
             make.right.equalTo(textBoard).offset(-36);
@@ -333,9 +335,15 @@
     }
     
     self.previousTextViewContentHeight = height;
-    [self.textView Ease_updateConstraints:^(EaseConstraintMaker *make) {
-        make.height.Ease_equalTo(height);
-    }];
+    if (_viewModel.inputBarStyle == EaseInputBarStyleTextVoiceAndVideo) {
+        [self.textBoard Ease_updateConstraints:^(EaseConstraintMaker *make) {
+            make.height.Ease_equalTo(height);
+        }];
+    } else {
+        [self.textView Ease_updateConstraints:^(EaseConstraintMaker *make) {
+            make.height.Ease_equalTo(height);
+        }];
+    }
 }
 
 - (void)_remakeButtonsViewConstraints
