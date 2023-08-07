@@ -368,7 +368,7 @@
     BOOL isCustomAvatar = NO;
     if (model.userDataDelegate && [model.userDataDelegate respondsToSelector:@selector(defaultAvatar)]) {
         if (model.userDataDelegate.defaultAvatar) {
-            _avatarView.image = model.userDataDelegate.defaultAvatar;
+            //_avatarView.image = model.userDataDelegate.defaultAvatar;
             isCustomAvatar = YES;
         }
     }
