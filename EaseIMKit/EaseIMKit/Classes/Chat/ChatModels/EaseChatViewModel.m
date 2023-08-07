@@ -25,7 +25,7 @@
         _bubbleBgEdgeInset = UIEdgeInsetsMake(8, 8, 8, 8);
         _contentFontColor = [UIColor blackColor];
         _contentFontSize = 18.f;
-        _inputBarStyle = EaseInputBarStyleAll;
+        _inputBarStyle = EaseInputBarStyleOnlyText;
         _avatarStyle = RoundedCorner;
         _avatarCornerRadius = 0;
     }

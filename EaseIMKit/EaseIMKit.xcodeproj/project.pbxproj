@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014BE2F8AEAC6DFD94A4068E /* libPods-EaseIMKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 437511AF6BBBDB31DFEFC990 /* libPods-EaseIMKit.a */; };
 		90892DDC25764D0900F50368 /* EaseIMKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 90892DDB25764D0900F50368 /* EaseIMKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E6AD3FA26B3097C00F620D5 /* EasePublicHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E6AD3F526B3097C00F620D5 /* EasePublicHeaders.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E6AD8FC26B3186600F620D5 /* EaseExtMenuModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E6AD75326B3186400F620D5 /* EaseExtMenuModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -386,6 +387,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32C4767F0FD1856491A15D30 /* Pods-EaseIMKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseIMKit.debug.xcconfig"; path = "Target Support Files/Pods-EaseIMKit/Pods-EaseIMKit.debug.xcconfig"; sourceTree = "<group>"; };
+		437511AF6BBBDB31DFEFC990 /* libPods-EaseIMKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EaseIMKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7286ED704573013304FF6382 /* Pods-EaseIMKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseIMKit.release.xcconfig"; path = "Target Support Files/Pods-EaseIMKit/Pods-EaseIMKit.release.xcconfig"; sourceTree = "<group>"; };
 		90892DDB25764D0900F50368 /* EaseIMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseIMKit.h; sourceTree = "<group>"; };
 		90A039F0254A6E7600D57B73 /* EaseIMKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EaseIMKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A039F4254A6E7600D57B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -771,15 +775,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014BE2F8AEAC6DFD94A4068E /* libPods-EaseIMKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ADEEF857E23ABB3A8713455 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32C4767F0FD1856491A15D30 /* Pods-EaseIMKit.debug.xcconfig */,
+				7286ED704573013304FF6382 /* Pods-EaseIMKit.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		90892DD325764C6900F50368 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				437511AF6BBBDB31DFEFC990 /* libPods-EaseIMKit.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -790,6 +806,7 @@
 				90A039F2254A6E7600D57B73 /* EaseIMKit */,
 				90A039F1254A6E7600D57B73 /* Products */,
 				90892DD325764C6900F50368 /* Frameworks */,
+				0ADEEF857E23ABB3A8713455 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2252,6 +2269,7 @@
 		};
 		90A039F9254A6E7600D57B73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32C4767F0FD1856491A15D30 /* Pods-EaseIMKit.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -2302,6 +2320,7 @@
 		};
 		90A039FA254A6E7600D57B73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7286ED704573013304FF6382 /* Pods-EaseIMKit.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "Apple Development";

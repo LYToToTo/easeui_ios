@@ -19,6 +19,7 @@ typedef NS_ENUM(NSInteger, EaseInputBarStyle) {
     EaseInputBarStyleNoEmoji,          //无表情
     EaseInputBarStyleNoAudioAndEmoji,  //无表情和语音
     EaseInputBarStyleOnlyText,         //纯文本
+    EaseInputBarStyleTextVoiceAndVideo, //发文字，语音，视频
 };
 
 /*!
