@@ -190,7 +190,7 @@
         UIView *textBoard = [UIView new];
         textBoard.layer.cornerRadius = 16;
         textBoard.userInteractionEnabled = YES;
-        textBoard.backgroundColor = [UIColor yellowColor];
+        textBoard.backgroundColor = [UIColor whiteColor];
         [self addSubview:textBoard];
         [textBoard Ease_makeConstraints:^(EaseConstraintMaker *make) {
             make.left.equalTo(self).offset(12);
@@ -201,8 +201,8 @@
         
         [textBoard addSubview:self.textView];
         [self.textView Ease_remakeConstraints:^(EaseConstraintMaker *make) {
-            make.left.equalTo(self).offset(0);
-            make.right.equalTo(self).offset(-36);
+            make.left.equalTo(textBoard).offset(0);
+            make.right.equalTo(textBoard).offset(-36);
             make.top.equalTo(_quoteView.ease_bottom).offset(0);
             make.height.Ease_equalTo(kTextViewMinHeight);
         }];
