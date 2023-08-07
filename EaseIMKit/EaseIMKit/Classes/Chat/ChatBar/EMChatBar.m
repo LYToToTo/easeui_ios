@@ -173,7 +173,20 @@
             make.left.equalTo(self).offset(16);
             make.right.equalTo(self).offset(-16);
         }
+        if (_viewModel.inputBarStyle == EaseInputBarStyleTextVoiceAndVideo) {
+            make.left.equalTo(self).offset(16);
+            make.right.equalTo(self).offset(-16);
+        }
     }];
+    
+    if (_viewModel.inputBarStyle == EaseInputBarStyleTextVoiceAndVideo) {
+        [_audioButton Ease_remakeConstraints:^(EaseConstraintMaker *make) {
+            make.centerY.equalTo(self.textView);
+            make.right.equalTo(self).offset(16);
+            make.width.Ease_equalTo(@16);
+            make.height.Ease_equalTo(kIconwidth);
+        }];
+    }
     /*
     self.audioDescBtn = [[UIButton alloc]init];
     [self.audioDescBtn setBackgroundColor:[UIColor colorWithHexString:@"#E9E9E9"]];
