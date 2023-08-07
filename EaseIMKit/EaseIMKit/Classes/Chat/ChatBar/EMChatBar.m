@@ -206,7 +206,7 @@
             make.left.equalTo(textBoard).offset(0);
             make.right.equalTo(textBoard).offset(-36);
             make.top.equalTo(textBoard).offset(0);
-            make.height.Ease_equalTo(kTextViewMinHeight);
+            make.bottom.equalTo(textBoard);
         }];
         
         // emoji 替换为语音， 更多替换为视频
@@ -504,6 +504,12 @@
     if([self _buttonAction:aButton]) {
         return;
     }
+    
+    if (_viewModel.inputBarStyle == EaseInputBarStyleTextVoiceAndVideo) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"kNOTIFICATION_LTCALL" object:nil];
+        return;
+    }
+    
     if (aButton.selected) {
         if (self.moreEmoticonView) {
             self.currentMoreView = self.moreEmoticonView;
@@ -530,6 +536,12 @@
     if([self _buttonAction:aButton]) {
         return;
     }
+    
+    if (_viewModel.inputBarStyle == EaseInputBarStyleTextVoiceAndVideo) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"kNOTIFICATION_LTVIDEO" object:nil];
+        return;
+    }
+    
     if (aButton.selected){
         if(self.moreFunctionView) {
             self.currentMoreView = self.moreFunctionView;

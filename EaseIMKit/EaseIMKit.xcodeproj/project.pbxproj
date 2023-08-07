@@ -31,7 +31,6 @@
 		9E6AD90E26B3186600F620D5 /* EMAudioRecordUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E6AD76A26B3186400F620D5 /* EMAudioRecordUtil.h */; };
 		9E6AD90F26B3186600F620D5 /* EMChatBarRecordAudioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6AD76B26B3186400F620D5 /* EMChatBarRecordAudioView.m */; };
 		9E6AD91026B3186600F620D5 /* EMAudioRecordUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9E6AD76C26B3186400F620D5 /* EMAudioRecordUtil.mm */; };
-		9E6AD91126B3186600F620D5 /* EMChatBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6AD76D26B3186400F620D5 /* EMChatBar.m */; };
 		9E6AD91226B3186600F620D5 /* EaseOneLoadingAnimationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E6AD76F26B3186400F620D5 /* EaseOneLoadingAnimationView.h */; };
 		9E6AD91326B3186600F620D5 /* EMMsgRecordCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E6AD77026B3186400F620D5 /* EMMsgRecordCell.h */; };
 		9E6AD91426B3186600F620D5 /* EMMessageTimeCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E6AD77126B3186400F620D5 /* EMMessageTimeCell.h */; };
@@ -788,7 +787,6 @@
 				32C4767F0FD1856491A15D30 /* Pods-EaseIMKit.debug.xcconfig */,
 				7286ED704573013304FF6382 /* Pods-EaseIMKit.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -2013,7 +2011,6 @@
 				9E6AD97E26B3186700F620D5 /* EaseViewConstraint.m in Sources */,
 				9E6AD99026B3186700F620D5 /* EasePhotoBrowser.m in Sources */,
 				9E6AD9FC26B3186700F620D5 /* EaseImageLoader.m in Sources */,
-				9E6AD91126B3186600F620D5 /* EMChatBar.m in Sources */,
 				9E6ADA2426B3186800F620D5 /* NSButton+EaseWebCache.m in Sources */,
 				9E6ADA0526B3186800F620D5 /* EaseWebImageDefine.m in Sources */,
 				9E6AD99C26B3186700F620D5 /* EaseGridCell.m in Sources */,
