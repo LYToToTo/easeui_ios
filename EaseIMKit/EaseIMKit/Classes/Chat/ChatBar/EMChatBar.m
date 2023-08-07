@@ -96,7 +96,7 @@
         make.left.equalTo(_quoteDeleteButton.ease_right).offset(10);
         make.top.equalTo(@12);
         make.bottom.equalTo(@-12);
-        make.right.equalTo(@-36);
+        make.right.equalTo(@-16);
         make.height.greaterThanOrEqualTo(@16);
     }];
     
@@ -152,6 +152,7 @@
     } else {
         // Fallback on earlier versions
     }
+    
     self.textView.returnKeyType = UIReturnKeySend;
     self.textView.backgroundColor = [UIColor whiteColor];
     self.textView.layer.cornerRadius = 16;
@@ -186,7 +187,26 @@
     }];
     
     if (_viewModel.inputBarStyle == EaseInputBarStyleTextVoiceAndVideo) {
-
+        UIView *textBoard = [UIView new];
+        textBoard.layer.cornerRadius = 16;
+        textBoard.userInteractionEnabled = YES;
+        textBoard.backgroundColor = [UIColor whiteColor];
+        [self addSubview:textBoard];
+        [textBoard Ease_makeConstraints:^(EaseConstraintMaker *make) {
+            make.left.equalTo(self).offset(12);
+            make.right.equalTo(self).offset(-12);
+            make.top.equalTo(_quoteView.ease_bottom).offset(5);
+            make.height.Ease_equalTo(kTextViewMinHeight);
+        }];
+        
+        [textBoard addSubview:self.textView];
+        [self.textView Ease_remakeConstraints:^(EaseConstraintMaker *make) {
+            make.left.equalTo(self).offset(0);
+            make.right.equalTo(self).offset(-36);
+            make.top.equalTo(_quoteView.ease_bottom).offset(0);
+            make.height.Ease_equalTo(kTextViewMinHeight);
+        }];
+        
         // emoji 替换为语音， 更多替换为视频
         [_emojiButton setBackgroundImage:[UIImage easeUIImageNamed:@"LT_Call"] forState:UIControlStateNormal];
         [_emojiButton setBackgroundImage:[UIImage easeUIImageNamed:@"LT_Call"] forState:UIControlStateSelected];
@@ -197,6 +217,7 @@
         [self bringSubviewToFront:_emojiButton];
         [self bringSubviewToFront:_conversationToolBarBtn];
     }
+
     /*
     self.audioDescBtn = [[UIButton alloc]init];
     [self.audioDescBtn setBackgroundColor:[UIColor colorWithHexString:@"#E9E9E9"]];
