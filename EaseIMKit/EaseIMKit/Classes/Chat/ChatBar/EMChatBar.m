@@ -118,9 +118,15 @@
     [_conversationToolBarBtn addTarget:self action:@selector(moreButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_conversationToolBarBtn];
     [_conversationToolBarBtn Ease_makeConstraints:^(EaseConstraintMaker *make) {
-        make.top.equalTo(_quoteView.ease_bottom).offset(10);
-        make.right.equalTo(self).offset(-16);
-        make.width.height.Ease_equalTo(kIconwidth);
+        if (_viewModel.inputBarStyle == EaseInputBarStyleTextVoiceAndVideo) {
+            make.right.equalTo(self).offset(-20);
+            make.width.height.Ease_equalTo(kIconwidth);
+            make.top.equalTo(_quoteView.ease_bottom).offset(10);
+        } else {
+            make.right.equalTo(self).offset(-16);
+            make.width.height.Ease_equalTo(kIconwidth);
+            make.top.equalTo(_quoteView.ease_bottom).offset(10);
+        }
     }];
     
     self.emojiButton = [[UIButton alloc] init];
