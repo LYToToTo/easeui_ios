@@ -96,7 +96,7 @@
         make.left.equalTo(_quoteDeleteButton.ease_right).offset(10);
         make.top.equalTo(@12);
         make.bottom.equalTo(@-12);
-        make.right.equalTo(@-16);
+        make.right.equalTo(@-36);
         make.height.greaterThanOrEqualTo(@16);
     }];
     
